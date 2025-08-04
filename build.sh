@@ -1,3 +1,8 @@
+#!/bin/bash
+
+echo "Cleaning previous builds"
+dotnet clean
+
 echo "Starting build"
 dotnet build --configuration Release
 
