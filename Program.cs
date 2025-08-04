@@ -29,7 +29,7 @@ public class Program
             .WithModule(new ScoreWebSocket("/ws"))
             .WithModule(new RequestLogger())
             .WithWebApi("/api", m => m.WithController<LeaderboardController>()
-            .HandleUnhandledException(async (ctx, ex) =>
+            .HandleUnhandledException((ctx, ex) =>
                 {
                     Console.WriteLine($"Exception: {ex}");
                     throw HttpException.BadRequest();
