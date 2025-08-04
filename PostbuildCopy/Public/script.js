@@ -15,7 +15,7 @@ function updateScores(scores) {
 }
 
 function fetchScores() {
-    fetch('api/leaderboard')
+    fetch('api/get-leaderboard')
         .then(r => r.json())
         .then(updateScores);
 }
