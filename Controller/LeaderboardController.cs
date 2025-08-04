@@ -8,7 +8,7 @@ namespace BrickBreakerLeaderboard;
 
 public class LeaderboardController : WebApiController
 {
-    [Route(HttpVerbs.Post, "/submit")]
+    [Route(HttpVerbs.Post, "/submit-score")]
     public async Task SubmitScore()
     {
         using var reader = new StreamReader(HttpContext.OpenRequestStream());
@@ -28,7 +28,7 @@ public class LeaderboardController : WebApiController
         ScoreWebSocket.BroadcastLeaderboardUpdate();
     }
 
-    [Route(HttpVerbs.Get, "/leaderboard")]
+    [Route(HttpVerbs.Get, "/get-leaderboard")]
     public async Task GetLeaderboard()
     {
         var scores = ScoreStorage.GetTopScores(10);

@@ -9,9 +9,9 @@ public class Program
     public static void Main(String[] args)
     {
         // create a server instance and run
-        var server = CreateServer("http://*:9000");
+        var server = CreateServer("http://*:8080");
         server.RunAsync();
-        Console.WriteLine("Server Started at Port 9000");
+        Console.WriteLine("Server Started at Port 8080");
         Console.WriteLine("Press any Key to Close server");
         
         // Block the main thread from ending execution
