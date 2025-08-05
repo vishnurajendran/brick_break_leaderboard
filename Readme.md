@@ -19,15 +19,15 @@ Once the correct dotnet version is installed, Follow the next steps to build the
 2. Naviagate the repo `cd brick_break_leaderboard`
 3. Run the build command `./build.sh`
 
-    **Note**: If you get a permission denied message run `chmod 777 build.sh`
+    > **Note**: If you get a permission denied message run `chmod 777 build.sh`
 4. Wait for build to complete
 
-    **NOTE**: **This should succeed always unless your dotnet is not setup correctly**
+    > **NOTE**: **This should succeed always unless your dotnet is not setup correctly**
 
 ### Running the server
 1. If the build completes, simply run `./run_server.sh`
 
-    **NOTE**: If you get a permission denied message run `chmod 777 run_server.sh`
+    > **NOTE**: If you get a permission denied message run `chmod 777 run_server.sh`
 
 ## Runtime
 The server runs on port 9000, Ensure HTTP traffic is allowed on this port
