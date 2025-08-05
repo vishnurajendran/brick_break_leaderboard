@@ -1,5 +1,8 @@
 namespace BrickBreakerLeaderboard;
 
+/// <summary>
+/// Data structure to store score entry information
+/// </summary>
 [Serializable]
 public class ScoreEntry
 {

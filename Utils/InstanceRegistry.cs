@@ -1,5 +1,10 @@
 namespace BrickBreakerLeaderboard;
 
+/// <summary>
+/// This is a utility class used to retrieve all singletons from a single
+/// point of truth, this ensures classes don't need to handle singleton instance
+/// individually
+/// </summary>
 public static class InstanceRegistry
 {
     private static Dictionary<Type, object> _instanceDict = new Dictionary<Type, object>();

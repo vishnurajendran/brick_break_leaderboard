@@ -1,5 +1,6 @@
 const scoresList = document.getElementById('scores');
 
+// function to display the scores in a tabular form
 function updateScores(scores) {
     scoresList.innerHTML = '';
     scores.forEach(s => {
@@ -20,7 +21,9 @@ function fetchScores() {
         .then(updateScores);
 }
 
+// Connect to web socket, and listen for score updates
 const ws = new WebSocket("ws://" + location.host + "/ws");
 ws.onmessage = e => updateScores(JSON.parse(e.data));
 
+// load the scores when the page loads
 fetchScores();

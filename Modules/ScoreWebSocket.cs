@@ -3,6 +3,10 @@ using Newtonsoft.Json;
 
 namespace BrickBreakerLeaderboard;
 
+/// <summary>
+/// This websocket broadcasts when a score is added to the leaderboard, this can be used
+/// to refresh client to display latest information.
+/// </summary>
 public class ScoreWebSocket : WebSocketModule
 {
     public ScoreWebSocket(string urlPath) : base(urlPath, true)
